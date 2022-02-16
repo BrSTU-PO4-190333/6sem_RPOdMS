@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">RatingImages</string>
     <string name="edit_message">Enter your text here</string>
+    <string name="button_send">Go!</string>
 </resources>
