@@ -2,4 +2,5 @@
     <string name="app_name">RatingImages</string>
     <string name="edit_message">Enter your text here</string>
     <string name="button_send">Go!</string>
+    <string name="img_puppy_content_description">puppy img</string>
 </resources>

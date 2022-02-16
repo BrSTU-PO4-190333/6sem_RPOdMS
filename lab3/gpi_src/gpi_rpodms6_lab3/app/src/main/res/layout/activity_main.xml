@@ -36,5 +36,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/button_send" />
+
     </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/puppy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/img_puppy_content_description"
+            app:srcCompat="@drawable/puppy">
+
+        </ImageView>
+    </FrameLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
