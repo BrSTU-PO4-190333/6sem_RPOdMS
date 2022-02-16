@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/backgroud">
 
     <LinearLayout
         android:id="@+id/linear1"
@@ -23,7 +24,9 @@
             android:ems="10"
             android:hint="@string/edit_message"
             android:inputType="textPersonName"
-            android:text="@string/edit_message">
+            android:text="@string/edit_message"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff">
 
             <requestFocus />
         </EditText>
