@@ -18,6 +18,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Canari"
+            android:label="@string/can" >
+        </activity>
+        <activity android:name=".Curili"
+            android:label="@string/can" >
+        </activity>
+        <activity android:name=".Maldivi"
+            android:label="@string/can" >
+        </activity>
+        <activity android:name=".Philippini"
+            android:label="@string/can" >
+        </activity>
     </application>
 
 </manifest>
