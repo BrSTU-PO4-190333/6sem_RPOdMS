@@ -22,7 +22,7 @@ public class MainActivity extends ListActivity {
         setListAdapter(adapter);
         AdapterView.OnItemClickListener itemListener = new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 // TODO Auto-generated method stub
             }
         };
