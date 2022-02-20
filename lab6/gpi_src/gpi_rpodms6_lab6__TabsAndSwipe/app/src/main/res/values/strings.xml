@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">gpi_rpodms6_lab6__TabsAndSwipe</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 </resources>
