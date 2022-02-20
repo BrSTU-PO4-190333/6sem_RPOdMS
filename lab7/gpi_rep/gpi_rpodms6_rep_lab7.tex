@@ -44,7 +44,7 @@
 
     \paragraph{} \textbf{Что нужно сделать}:
 
-    Наследовать интерфейс GestureDetector.OnGestureListener.
+    (Задание 1) Наследовать интерфейс GestureDetector.OnGestureListener.
     Реализовать метод отслеживания появления касания, то есть палец прижат к экрану (onDown).
     Реализовать метод отслеживающий жест смахивания (onFling).
     Реализовать метод отслеживающий прижатие пальца длительное время (onLongPress).
@@ -57,6 +57,9 @@
     Реализовать метод отслеживающий появление события во время выполнения жеста двойного нажатия,
     включая касание, перемещение, подъема пальца (onDoubleTapEvent).
     Реализовать метод отслеживающий одиночное нажатие-клик (onSingleTapConfirmed).
+    
+    (Задание 2) Использовать экземпляр класса GestureDetectorCompat, для того, чтобы не переопределять все методы интерфейса,
+    а реализовать один, который нам нужен. Реализовать метод отслеживающий жест смахивания (onFling).
 
     \paragraph{} \textbf{Разработка дизайна}:
 
@@ -121,13 +124,38 @@
     \lstinputlisting[language=xml, name=app/src/main/res/values/strings.xml]
         {../gpi_src/gpi_rpodms6_lab7/app/src/main/res/values/strings.xml}
 
+    \newpage
+
+    \paragraph{} \textbf{Разработка дизайна}:
+
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=12cm]
+            {_assets/GestSubset__onFling.jpg}
+        \caption{onFling}
+    \end{figure}
+ 
+    \paragraph{} \textbf{Исходный код}: 
+
+    \lstinputlisting[language=java, name=app/src/main/java/.../MainActivity.java]
+        {../gpi_src/gpi_rpodms6_lab7__gestsubset/app/src/main/java/io/github/Pavel_Innokentevich_Galanin/gpi_rpodms6_lab7__gestsubset/MainActivity.java}
+
+    \lstinputlisting[language=xml, name=app/src/main/res/layout/activity_main.xml]
+        {../gpi_src/gpi_rpodms6_lab7__gestsubset/app/src/main/res/layout/activity_main.xml}
+
+    \lstinputlisting[language=xml, name=app/src/main/res/values/strings.xml]
+        {../gpi_src/gpi_rpodms6_lab7__gestsubset/app/src/main/res/values/strings.xml}
+
     \paragraph{} \textbf{Вывод}:
     
-    Наследовал интерфейс GestureDetector.OnGestureListener.\\
+    (1) Наследовал интерфейс GestureDetector.OnGestureListener.\\
     Реализовать методы onDown, onFling, onLongPress, onScroll, onShowPress, onSingleTapUp.
     
     Наследовал интерфейс GestureDetector.OnDoubleTapListener.\\
     Реализовать методы onDoubleTap, onDoubleTapEvent, onSingleTapConfirmed.
+
+    (2) Реализовали экземпляр класса GestureDetectorCompat, для того, чтобы не определять все методы жестов,
+    а задать свой определённый жест. Определили метод отслеживания жеста смахивания (onFling). 
 
     % = = = = = = = =
     \paragraph{} \textbf{Список использованных источников} 
