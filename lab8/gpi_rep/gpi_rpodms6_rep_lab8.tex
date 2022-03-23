@@ -1,0 +1,271 @@
+\documentclass[12pt, a4paper, simple]{eskdtext}
+
+\usepackage{hyperref}
+\usepackage{env}
+\usepackage{_sty/gpi_lst}
+\usepackage{_sty/gpi_toc}
+\usepackage{_sty/gpi_t}
+\usepackage{_sty/gpi_p}
+\usepackage{_sty/gpi_u}
+
+% Код
+% \ESKDletter{О}{Л}{Р}
+% \def \gpiDocTypeNum {81}
+% \def \gpiDocVer {00}
+% \def \gpiCode {\ESKDtheLetterI\ESKDtheLetterII\ESKDtheLetterIII.\gpiStudentGroupName\gpiStudentGroupNum.\gpiStudentCard-0\gpiDocNum~\gpiDocTypeNum~\gpiDocVer}
+
+\def \gpiDocTopic {Отчёт лабораторной работы №\gpiDocNum}
+
+
+% колонтитулы
+\usepackage{fancybox, fancyhdr}
+\fancypagestyle{plain}
+{
+    \renewcommand{\footrulewidth}{0pt}          % Толщина отделяющей полоски снизу
+    \renewcommand{\headrulewidth}{0pt}          % Толщина отделяющей полоски сверху
+    % \fancyhead[C]{\hfill\gpiCode\hfill}         % Коллонтитул сверху
+    \fancyfoot[C]{\hfillстр.~\thepage}          % Коллонтитул снизу
+}
+
+% Графа 1 (наименование изделия/документа)
+% \ESKDcolumnI {\ESKDfontII \gpiTopic \\ \gpiDocTopic}
+
+% Графа 2 (обозначение документа)
+% \ESKDsignature {\gpiCode}
+
+% Графа 9 (наименование или различительный индекс предприятия) задает команда
+% \ESKDcolumnIX {\gpiDepartment}
+
+% Графа 11 (фамилии лиц, подписывающих документ) задают команды
+% \ESKDcolumnXIfI {\gpiStudentSurname}
+% \ESKDcolumnXIfII {\gpiTeacherSurname}
+% \ESKDcolumnXIfV {\gpiTeacherSurname}
+
+\begin{document}
+    \input{_tex/gpi_rep_titlePage.tex}
+    \ESKDstyle{empty}
+    \thispagestyle{plain}
+    \pagestyle{plain}
+
+    % \paragraph{}
+    \begin{center}
+        \textbf{\gpiDocTopic}
+    \end{center}
+
+    % = = = = = = = =
+    \paragraph{} \textbf{Тема}: <<\gpiTopicRep>>
+
+    \paragraph{} \textbf{Цель}: 1) создать набор жестов; 2) использовать созданные жесты в приложении.
+
+    \paragraph{} \textbf{Что нужно сделать}:
+    Скачать приложение <<Gesture Builder Tool>>.
+    Нарисовать жесты <<1>>, <<2>>, <<S>>.
+    Созранить жесты под именем <<1>>, <<2>>, <<S>>.
+    Найти файл жестов на карте устройства и перекинуть его в Android Studio. 
+    Наследовать интерфейс OnGesturePerformedListener.
+    Реализовать метод onGesturePerformed, который вызывается при распозновании жеста.
+    Вывести на экран вероятности жеста, либо сообщить о его отсутствии.
+
+    \paragraph{} \textbf{Ход работы}:
+
+    Скачиваем приложение <<Gesture Builder Tool>> из Play маркета.
+    Скриншот на рисунке~\ref{fig:PlayStore_GestureBuilderTool}.
+
+    Создаем новый жест (жест <<1>>). Скриншот на рисунке~\ref{fig:GestureBuilderTool_create_1}.
+
+    Рисуем жест (жест <<1>>). Скриншот на рисунке~\ref{fig:GestureBuilderTool_draw_1}.
+
+    Сохраняем жест (жест <<1>>). Скриншот на рисунке~\ref{fig:GestureBuilderTool_save_1}.
+
+    Создаем новый жест (жест <<2>>). Скриншот на рисунке~\ref{fig:GestureBuilderTool_create_2}.
+
+    Рисуем жест (жест <<2>>). Скриншот на рисунке~\ref{fig:GestureBuilderTool_draw_2}.
+
+    Сохраняем жест (жест <<2>>). Скриншот на рисунке~\ref{fig:GestureBuilderTool_save_2}.
+
+    Создаем новый жест (жест <<S>>). Скриншот на рисунке~\ref{fig:GestureBuilderTool_create_S}.
+
+    Рисуем жест (жест <<S>>). Скриншот на рисунке~\ref{fig:GestureBuilderTool_draw_S}.
+
+    Сохраняем жест (жест <<S>>). Скриншот на рисунке~\ref{fig:GestureBuilderTool_save_S}.
+
+    Смотрим куда сохранились жесты, нажав на кнопку <<?>>. Скриншот на рисунке~\ref{fig:GestureBuilderTool_where_saved}.
+
+    Находим файл жестов на карте Android. Скриншот на рисунке~\ref{fig:gestures_txt}.
+
+    \begin{figure}[!h]
+        \centering
+        \begin{minipage}{0.24\textwidth}
+            \centering
+            \includegraphics[height=6cm]
+                {_assets/PlayStore_GestureBuilderTool.jpg}
+            \caption{(1) Скачиваем в маркете}
+            \label{fig:PlayStore_GestureBuilderTool}
+        \end{minipage}
+        \begin{minipage}{0.24\textwidth}
+            \centering
+            \includegraphics[height=6cm]
+                {_assets/GestureBuilderTool_create_1.jpg}
+            \caption{(2) Создать жест}
+            \label{fig:GestureBuilderTool_create_1}
+        \end{minipage}
+        \begin{minipage}{0.24\textwidth}
+            \centering
+            \includegraphics[height=6cm]
+                {_assets/GestureBuilderTool_draw_1.jpg}
+            \caption{(3) Рисуем жест}
+            \label{fig:GestureBuilderTool_draw_1}
+        \end{minipage}
+        \begin{minipage}{0.24\textwidth}
+            \centering
+            \includegraphics[height=6cm]
+                {_assets/GestureBuilderTool_save_1.jpg}
+            \caption{(4) Сохраняем жест}
+            \label{fig:GestureBuilderTool_save_1}
+        \end{minipage}
+    \end{figure}
+
+    \begin{figure}[!h]
+        \centering
+        \begin{minipage}{0.24\textwidth}
+            \centering
+            \includegraphics[height=6cm]
+                {_assets/GestureBuilderTool_where_saved.jpg}
+            \caption{(11) Куда сохранен файл жестов}
+            \label{fig:GestureBuilderTool_where_saved}
+        \end{minipage}
+        \begin{minipage}{0.24\textwidth}
+            \centering
+            \includegraphics[height=6cm]
+                {_assets/GestureBuilderTool_create_2.jpg}
+            \caption{(5) Создать жест}
+            \label{fig:GestureBuilderTool_create_2}
+        \end{minipage}
+        \begin{minipage}{0.24\textwidth}
+            \centering
+            \includegraphics[height=6cm]
+                {_assets/GestureBuilderTool_draw_2.jpg}
+            \caption{(6) Рисуем жест}
+            \label{fig:GestureBuilderTool_draw_2}
+        \end{minipage}
+        \begin{minipage}{0.24\textwidth}
+            \centering
+            \includegraphics[height=6cm]
+                {_assets/GestureBuilderTool_save_2.jpg}
+            \caption{(7) Сохраняем жест}
+            \label{fig:GestureBuilderTool_save_2}
+        \end{minipage}
+    \end{figure}
+
+    \begin{figure}[!h]
+        \centering
+        \begin{minipage}{0.24\textwidth}
+            \centering
+            \includegraphics[height=6cm]
+                {_assets/gestures.txt.jpg}
+            \caption{(12) Файл с жестами на карте}
+            \label{fig:gestures_txt}
+        \end{minipage}
+        \begin{minipage}{0.24\textwidth}
+            \centering
+            \includegraphics[height=6cm]
+                {_assets/GestureBuilderTool_create_S.jpg}
+            \caption{(8) Создать жест}
+            \label{fig:GestureBuilderTool_create_S}
+        \end{minipage}
+        \begin{minipage}{0.24\textwidth}
+            \centering
+            \includegraphics[height=6cm]
+                {_assets/GestureBuilderTool_draw_S.jpg}
+            \caption{(9) Рисуем жест}
+            \label{fig:GestureBuilderTool_draw_S}
+        \end{minipage}
+        \begin{minipage}{0.24\textwidth}
+            \centering
+            \includegraphics[height=6cm]
+                {_assets/GestureBuilderTool_save_S.jpg}
+            \caption{(10) Сохраняем жест}
+            \label{fig:GestureBuilderTool_save_S}
+        \end{minipage}
+    \end{figure}
+
+    \newpage
+
+ % \paragraph{} \textbf{Разработка дизайна}:
+
+    % \begin{figure}[h!]
+    %     \centering
+    %     \includegraphics[width=12cm]
+    %         {_assets/PlayStore_GestureBuilderTool.jpg}
+    %     \caption{onFling}
+    % \end{figure}
+
+    \paragraph{} \textbf{Разработка дизайна}:
+
+    \begin{figure}[!h]
+        \centering
+        \begin{minipage}{0.24\textwidth}
+            \centering
+            \includegraphics[height=6cm]
+                {_assets/i_draw_1.jpg}
+            \caption{Жест <<1>> - распознан}
+            \label{fig:i_draw_1}
+        \end{minipage}
+        \begin{minipage}{0.24\textwidth}
+            \centering
+            \includegraphics[height=6cm]
+                {_assets/i_draw_2.jpg}
+            \caption{Жест <<2>> - распознан}
+            \label{fig:i_draw_2}
+        \end{minipage}
+        \begin{minipage}{0.24\textwidth}
+            \centering
+            \includegraphics[height=6cm]
+                {_assets/i_draw_3.jpg}
+            \caption{Жест <<3>> - не существует}
+            \label{fig:i_draw_3}
+        \end{minipage}
+        \begin{minipage}{0.24\textwidth}
+            \centering
+            \includegraphics[height=6cm]
+                {_assets/i_draw_S.jpg}
+            \caption{Жест <<S>> - распознан}
+            \label{fig:i_draw_S}
+        \end{minipage}
+    \end{figure}
+
+    \newpage
+    
+    \paragraph{} \textbf{Исходный код}: 
+
+    \lstinputlisting[language=xml, name=app/src/main/res/values/strings.xml]
+        {../gpi_src/gpi_rpodms_lab8/app/src/main/res/values/strings.xml}
+
+    \lstinputlisting[language=xml, name=app/src/main/res/layout/activity_main.xml]
+        {../gpi_src/gpi_rpodms_lab8/app/src/main/res/layout/activity_main.xml}
+
+    \lstinputlisting[language=java, name=app/src/main/java/.../MainActivity.java]
+        {../gpi_src/gpi_rpodms_lab8/app/src/main/java/io/github/Pavel_Innokentevich_Galanin/gpi_rpodms_lab8/MainActivity.java}
+
+    \paragraph{} \textbf{Вывод}:
+    Скачали приложение <<Gesture Builder Tool>> из Play маркета.
+    Нарисовали жесты <<1>>, <<2>>, <<S>>.
+    Созранить жесты под именем <<1>>, <<2>>, <<S>>.
+    Нашли файл жестов на карте устройства и перекинули его в Android Studio. 
+    Наследовали интерфейс OnGesturePerformedListener.
+    Реализовали метод onGesturePerformed, который вызывается при распозновании жеста.
+    Вывели на экран вероятности жеста, либо сообщили о его отсутствии.
+
+    % = = = = = = = =
+    \paragraph{} \textbf{Список использованных источников} 
+    % \addcontentsline{toc}{section}{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+    % \section*{Список использованных источников}
+    \begin{enumerate}
+        \item[1.] Кондратюк, А.П. Разработка приложений для мобильных операционных систем «Android» :
+        ЭУМК для студ. второй ступени (магистратуры) специальности 1-31 81 06 <<Веб-программирование и интернет-технологии>>
+        физ.-мат. фак. / А.П. Кондратюк ; Брест. гос. ун-т им. А.С. Пушкина, каф. ПМиИ. – Брест :
+        электрон. издание БрГУ, 2016. – 469 с.\\
+        §23. Лабораторная работа №6, cc. 401-414.
+    \end{enumerate}
+    \newpage
+\end{document}
