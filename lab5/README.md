@@ -2,5 +2,5 @@
 
 | Картинка                                              | Описание                           |
 | ----------------------------------------------------- | ---------------------------------- |
-| <img height="200" src="gpi_rep/_assets/top.jpg" />    | Начало прокруживаемого JSON списка |
-| <img height="200" src="gpi_rep/_assets/bottom.jpg" /> | Конец прокруживаемого JSON списка  |
+| <img height="200" src="gpi_rep/_assets/top.jpg" />    | Начало прокручиваемого JSON списка |
+| <img height="200" src="gpi_rep/_assets/bottom.jpg" /> | Конец прокручиваемого JSON списка  |
