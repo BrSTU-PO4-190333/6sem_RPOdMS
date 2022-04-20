@@ -172,6 +172,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
             // две картинки, которые открыты теперь пустые. Можно открыть другие две картинки
             first_image_id = -1;
             second_image_id = -1;
+            game_counter -= 1;
             render();
             return;
         }
