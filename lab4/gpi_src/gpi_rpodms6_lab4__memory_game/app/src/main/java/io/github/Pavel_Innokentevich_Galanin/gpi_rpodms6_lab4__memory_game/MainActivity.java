@@ -98,14 +98,40 @@ public class MainActivity extends Activity implements View.OnClickListener {
         new_game();
     }
 
+    public int random(int a, int b) {
+        int min, max;
+        if (a > b) {
+            max = a;
+            min = b;
+        } else {
+            max = b;
+            min = a;
+        }
+
+        return (int) (Math.random() * ((max - min) + 1)) + min;
+    }
+
+    public void anti_sort_array() {
+        for (int i = 0; i < array_sources_images.length; ++i) {
+            for (int j = 0; j < array_sources_images.length; ++j) {
+                int index = random(0, array_sources_images.length - 1);
+                int temp = array_sources_images[index];
+                array_sources_images[index] = array_sources_images[j];
+                array_sources_images[j] = temp;
+            }
+        }
+    }
+
     public void new_game() {
         // Все картинки будут закрыты
         for (int i = 0; i < array_image_is_opened.length; ++i) {
             array_image_is_opened[i] = false;
         }
 
+        anti_sort_array();
+
+        // Каждой картинке ставим путь до изображения
         for (int i = 0; i < array_images.length; ++i) {
-            // Каждой картинке ставим путь до изображения
             array_images[i].setImageResource(array_sources_images[i]);
         }
 
@@ -192,12 +218,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         game_counter += 1;
         tv_game_counter.setText("" + game_counter);
-
-        check_win();
     }
 
     @Override
     public void onClick(View view) {
+        check_win();
         switch (view.getId()) {
             case R.id.ImageView_0:
                 change_image_view(0);
